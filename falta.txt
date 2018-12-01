@@ -1,0 +1,6 @@
+User: admin
+Password: password
+
+:v
+
+Lo que falta es solamente en la parte del administrador. No guarda las modificacion al querer editar algun articulo. El buscador, la neta no se hacerlo jajajaja. Luego ahi mismo en el index del administrador hay unos input numerico para agregar o quitar cantidad de articulos disponibles, pero pues no se como hacer una funciones :c la neta soy mas de frontend XD
