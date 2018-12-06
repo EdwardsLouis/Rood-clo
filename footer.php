@@ -14,8 +14,8 @@
                     </span>
                     <span class="four columns">
                         <span style="color: #fff; display: block;"><a href="CAcc.php" style="font-size: 24px; font-family: k2dextrabold;">ACCESORIOS</a></span>
-                        <span style="display: block;"><a href="CAcc.php#CAAnillos">Gorras</a></span>
-                        <span style="display: block;"><a href="CAcc.php#CAGorras">Anillos</a></span>
+                        <span style="display: block;"><a href="CAcc.php#CAGorras">Gorras</a></span>
+                        <span style="display: block;"><a href="CAcc.php#CAAnillos">Anillos</a></span>
                 </span>
             </div>
         </div>

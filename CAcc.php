@@ -62,82 +62,35 @@ jQuery(function($) {
     </div>
 
     <div class="twelve columns" style="margin-bottom: 30px;">
-        <span class="twelve columns" id="CMPlayeras" style="font-size: 4rem; font-family: k2dbold; display: ;">Gorras</span>
+        <span class="twelve columns" id="CAGorras" style="font-size: 4rem; font-family: k2dbold; display: ;">Gorras</span>
         <span class="twelve columns" style="margin-bottom: 20px;">
-            <span class="slider">
-                <span class="ssslider" style="height: 300px;">
-                <?php 
-                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_categoria = 'Gorra' ORDER BY article_id DESC LIMIT 3");
-                foreach($query as $article){ 
-                ?>
-                    <img src="images/articulos/<?php echo $article["article_img"]; ?>" alt="" onclick="location.href='articulo.php?id=<?php echo $article['article_id'];?>'" class="four columns" style="margin: 0; cursor: pointer; height: 100%;">
-                <?php } ?>
-                </span>
-                <span class="ssslider" style="height: 300px;">
-                <?php 
-                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_categoria = 'Gorra' ORDER BY article_id DESC LIMIT 4,6");
-                foreach($query as $article){ 
-                ?>
-                    <img src="images/articulos/<?php echo $article["article_img"]; ?>" alt="" onclick="location.href='articulo.php?id=<?php echo $article['article_id'];?>'" class="four columns" style="margin: 0; cursor: pointer; height: 100%;">
-                <?php } ?>
-                </span>
-            </span>
-        </span>
-        <!--<span class="twelve columns">
-            <span class="slider">
-                <span class="ssslider" style="height: 300px;">
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px; margin: 0;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px;"></span>
-                </span>
-                <span class="ssslider" style="height: 300px;">
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px; margin: 0;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px;"></span>
-                </span>
-            </span>
-        </span> -->
 
+                <?php 
+                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_genero = 'Accesorio' AND article_categoria = 'Gorra' ORDER BY article_id DESC");
+                foreach($query as $article){ 
+                ?>
+                    <a href="articulo.php?id=<?php echo $article['article_id'];?>">
+                        <span class="two columns img" style="background-image: url('images/articulos/<?php echo $article["article_img"]; ?>'); background-position: center; background-size: cover; background-repeat: no-repeat; height: 450px; cursor: pointer;"></span>
+                    </a>
+
+                <?php } ?>
+        </span>
     </div>
     <div class="twelve columns" style="margin-bottom: 30px;">
-        <span class="twelve columns" id="CMSudaderas"  style="font-size: 4rem; font-family: k2dbold; display: ;">Anillos</span>
+        <span class="twelve columns" id="CAAnillos" style="font-size: 4rem; font-family: k2dbold; display: ;">Anillos</span>
         <span class="twelve columns" style="margin-bottom: 20px;">
-            <span class="slider">
-            <span class="ssslider" style="height: 300px;">
+
                 <?php 
-                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_categoria = 'Anillo' ORDER BY article_id DESC LIMIT 3");
+                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_genero = 'Accesorio' AND article_categoria = 'Anillo' ORDER BY article_id DESC");
                 foreach($query as $article){ 
                 ?>
-                    <img src="images/articulos/<?php echo $article["article_img"]; ?>" alt="" onclick="location.href='articulo.php?id=<?php echo $article['article_id'];?>'" class="four columns" style="margin: 0; cursor: pointer; height: 100%;">
+                    <a href="articulo.php?id=<?php echo $article['article_id'];?>">
+                        <span class="two columns img" style="background-image: url('images/articulos/<?php echo $article["article_img"]; ?>'); background-position: center; background-size: cover; background-repeat: no-repeat; height: 450px; cursor: pointer;"></span>
+                    </a>
+
                 <?php } ?>
-                </span>
-                <span class="ssslider" style="height: 300px;">
-                <?php 
-                $query = $pdo->query("SELECT article_id, article_img, article_genero, article_categoria FROM articles WHERE article_categoria = 'Anillo' ORDER BY article_id DESC LIMIT 4,6");
-                foreach($query as $article){ 
-                ?>
-                    <img src="images/articulos/<?php echo $article["article_img"]; ?>" alt="" onclick="location.href='articulo.php?id=<?php echo $article['article_id'];?>'" class="four columns" style="margin: 0; cursor: pointer; height: 100%;">
-                <?php } ?>
-                </span>
-            </span>
         </span>
-
-        <!--<span class="twelve columns">
-            <span class="slider">
-                <span class="ssslider" style="height: 300px;">
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px; margin: 0;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: tomato; height: 300px;"></span>
-                </span>
-                <span class="ssslider" style="height: 300px;">
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px; margin: 0;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px;"></span>
-                    <span class="four columns" onclick="location.href='articulo.php'" style="cursor: pointer; background-color: blue; height: 300px;"></span>
-                </span>
-            </span>
-        </span> -->
-
-
+    </div>
 
     </div>
 

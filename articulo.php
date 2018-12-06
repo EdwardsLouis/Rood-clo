@@ -64,8 +64,7 @@ jQuery(function($) {
 
 <div class="twelve columns" style="padding-top: 50px;">
     <div class="eight columns">
-        <span class="twelve columns" style="background-color: tomato; height: 80%;">
-            <img src="images/articulos/<?php echo $data['article_img']; ?>" alt="" style="height: 100%; width: 100%;">
+        <span class="twelve columns" style="background-image: url('images/articulos/<?php echo $data['article_img']; ?>'); background-position: center; background-size: cover; height: 800px;">
         </span>
     </div>
     <div class="four columns">
@@ -75,7 +74,7 @@ jQuery(function($) {
             <span class="twelve columns" style="font-size: 2.5rem; font-family: k2dregular; "><?php echo $data['article_categoria']; ?></span>
             <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; ">Tallas: <?php echo $data['article_tallas']; ?></span>
             <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; ">Disponibles: <?php echo $data['article_cantidad']; ?></span>
-            <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; ">Para <?php echo $data['article_genero']; ?></span>
+            <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; "><?php echo $data['article_genero']; ?></span>
             <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; ">Precio: $<?php echo $data['article_precio']; ?></span>
             <span class="twelve columns" style="font-size: 2rem; font-family: k2dregular; ">Descripción: <?php echo $data['article_content']; ?></span>
         </span>

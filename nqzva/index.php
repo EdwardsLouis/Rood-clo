@@ -185,7 +185,7 @@ $query = $pdo->query("SELECT article_id, article_categoria, article_title, artic
                 <th>Categoria</th>
                 <th>Nombre</th>
                 <th>Cantidad</th>
-                <th>Talla</th>
+                <th>Para</th>
                 <th>Agregar</th>
                 <th>Venidos</th>
                 <th>Editar</th>
@@ -206,7 +206,7 @@ foreach($query as $article){
                 <td><?php echo $article["article_categoria"]; ?></td>
                 <td><?php echo $article["article_title"]; ?></td>
                 <td><?php echo $article["article_cantidad"]; ?></td>
-                <td><?php echo $article["article_tallas"]; ?></td>
+                <td><?php echo $article["article_genero"]; ?></td>
                 <td><span class="centrar"><a href="agregarCantidad.php?id=<?php echo $article['article_id']; ?>&cantidad=<?php echo $article['article_cantidad']; ?>" class="icon-plus"></a></span></td>
                 <td><span class="centrar"><a href="vendidoCantidad.php?id=<?php echo $article['article_id']; ?>&cantidad=<?php echo $article['article_cantidad']; ?>" class="icon-shopping-cart"></a></span></td>
                 <td><span class="centrar"><a href="editar.php?id=<?php echo $article['article_id']; ?>" class="icon-pencil"></a></span></td>

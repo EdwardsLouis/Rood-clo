@@ -90,6 +90,7 @@ if(isset($_SESSION['logged_in'])){
                 <span class="six columns">
                     <p class="twelve columns">Tallas</p>
                     <select name="tallas" id="" class="twelve columns">
+                        <option value="--">--</option>
                         <option value="xS">xS</option>
                         <option value="S">S</option>
                         <option value="M">M</option>

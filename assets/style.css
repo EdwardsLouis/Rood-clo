@@ -75,3 +75,14 @@ a:hover{
     text-decoration: none;
 }
 
+.img{
+    transition: .5s;
+
+}
+
+.img:hover{
+    border-radius: 5px ; 
+    border: #ff3131 2px solid ;
+    opacity: 0.5;
+    box-shadow: #8e8e8e 0px 0px 9px 1px;
+}
