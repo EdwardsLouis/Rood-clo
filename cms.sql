@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2018 a las 20:30:15
+-- Tiempo de generación: 06-12-2018 a las 21:43:13
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -47,16 +47,10 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`article_id`, `article_title`, `article_content`, `article_timestamp`, `article_img`, `article_categoria`, `article_tallas`, `article_precio`, `article_genero`, `article_cantidad`, `article_sku`) VALUES
-(2, 'qqwerty', 'fghjkl', 1538666111, 'ataud.png', 'Playera', 'xS', 4567, 'Mujer', 234567, '5678'),
-(3, 'qwer', 'dfghjklÃ±', 1538667118, 'antilope.png', 'Playera', 'xS', 23456, 'Mujer', 34567, '3456789'),
-(4, 'wertyuiop', 'rujikl,', 1538667141, 'gruÃ±osito.png', 'Playera', 'xS', 34567890, 'Mujer', 4567890, '456780'),
-(5, 'qwe', '123', 1539131418, 'roodlogo.png', 'Playera', 'L', 123, 'Unisex', 123, '123'),
-(6, '123', '123', 1539131434, 'antilope.png', 'Gorra', 'M', 123, 'Hombre', 123, '123'),
-(7, '123', '123', 1539131450, 'gruÃ±osito.png', 'Sudadera', 'xL', 123, 'Mujer', 123, '123'),
-(8, 'asd', '123', 1539131567, 'roodlogo.png', 'Sudadera', 'S', 123, 'Mujer', 123, '123'),
-(9, '123', '123', 1539131584, 'antilope.png', 'Gorra', 'S', 123, 'Mujer', 23, '123'),
-(10, 'qweqweq', '123', 1539131594, 'ataud.png', 'Sudadera', 'M', 123, 'Mujer', 123, '123'),
-(11, 'prueba', 'qwe1<br />\r\n', 1543642676, 'ataud.png', 'Playera', 'xS', 12, 'Mujer', 123, 'q123');
+(15, 'Prueba 1', 'Esta muy chida', 1544128635, '41Y3G9QoqBL.jpg', 'Playera', 'S', 150, 'Mujer', 5, '001'),
+(16, 'Prueba 2', 'Esta bien chida', 1544128695, '101groot-marino-mujer1-47fb05bbcea478489b15018739439305-640-0.jpg', 'Playera', 'M', 150, 'Mujer', 20, '002'),
+(17, 'Prueba 3', 'Esta bien chida', 1544128749, 'camiseta-de-mangas-tres-cuartos.jpg', 'Playera', 'M', 150, 'Mujer', 5, '003'),
+(18, 'Prueba 4', 'Ah mira esta bien chida', 1544128803, '610XE7RGNVL._SX522._SX._UX._SY._UY_.jpg', 'Playera', 'S', 150, 'Mujer', 8, '004');
 
 -- --------------------------------------------------------
 
@@ -100,7 +94,8 @@ INSERT INTO `boletin` (`boletin_id`, `boletin_correo`) VALUES
 (4, 'asdfghj@sdfghjk.com'),
 (5, 'asdfghj@sdfghjk.com'),
 (6, 'asdfghj@sdfghjk.com'),
-(7, 'asdfghj@sdfghjk.com');
+(7, 'asdfghj@sdfghjk.com'),
+(8, 'masnk1@sdfghjk.com');
 
 -- --------------------------------------------------------
 
@@ -140,6 +135,25 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`) VALUES
 (1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vendido`
+--
+
+CREATE TABLE `vendido` (
+  `vendido_id` int(11) NOT NULL,
+  `vendido_articulo` int(11) NOT NULL,
+  `vendido_cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `vendido`
+--
+
+INSERT INTO `vendido` (`vendido_id`, `vendido_articulo`, `vendido_cantidad`) VALUES
+(10, 14, 1);
+
 --
 -- Índices para tablas volcadas
 --
@@ -175,6 +189,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indices de la tabla `vendido`
+--
+ALTER TABLE `vendido`
+  ADD PRIMARY KEY (`vendido_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -182,7 +202,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `banners`
@@ -194,7 +214,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT de la tabla `boletin`
 --
 ALTER TABLE `boletin`
-  MODIFY `boletin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `boletin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `hm`
@@ -207,6 +227,12 @@ ALTER TABLE `hm`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `vendido`
+--
+ALTER TABLE `vendido`
+  MODIFY `vendido_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
